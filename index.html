@@ -7,27 +7,27 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <section>
+    <section id="landing">
         <nav>
             <div><span class="span__features">Sanat Shourya</span></div>
             <ul class="nav__list">
-                <li class="nav__list--item">Languages</li>
-                <li class="nav__list--item">Projects</a></li>
+                <li class="nav__list--item"><a href="#languages">Languages</a> </li>
+                <li class="nav__list--item"><a href="#projects">Projects</a></li>
                 <li class="nav__list--item nav__list--button">Contact</li>
             </ul>
         </nav>
         <div class="aboutme">
             <div class="aboutme__description">
                 <figure class="aboutme__photo">
-                    <img src="" alt="" class="aboutme--picture">
+                    <img src="Screenshot 2024-11-25 002031.png" alt="" class="aboutme--picture">
                 </figure>
-                <h1>Hello! This is Sanat Shourya </h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore inventore dolorum ratione tempora. Eaque odio accusamus sunt vitae voluptate, cumque maxime doloremque. Quos, quas odio maiores eius rerum dolores fugiat, asperiores minima deserunt quisquam reiciendis labore sit, sed adipisci voluptas hic consequuntur! Dicta atque dolore sequi iste mollitia saepe reiciendis.</p>
+                <h1 class="heading">Hello! This is <span class="span__features">Sanat Shourya</span><span class="wiggle">👋</span></h1>
+                <p class="subheading">I'm a <span class="span__features--para">Frontend Software Engineer</span> with a strong passion for building responsive and performant web applications with great user experiences that positively impacts the world.</p>
                 <ul class="logos">
                     <li class="logos--icon"><img src="twitter.png" alt="" class="logos--image"></li>
                     <li class="logos--icon"><img src="linkedin.png" alt="" class="logos--image"></li>
                     <li class="logos--icon"><img src="email.png" alt="" class="logos--image"></li>
-                    <li class="logos--icon"><img src="gtihub.png" alt="" class="logos--image"></li>
+                    <li class="logos--icon"><img src="github.svg" alt="" class="logos--image"></li>
                     <li class="logos--icon"><img src="phone.png" alt="" class="logos--image"></li>
                 </ul>
             </div>
@@ -37,7 +37,7 @@
         </div>
     </section>
     <section id="languages">
-        <h1>This is my Technology Stack</h1>
+        <h1 class="section__heading">This is my <span class="span__features">technology stack</span></h1>
         <div class="language__container">
             <div class="language__lang"><img src="html5.png" alt="" class="language__icon"></div>
             <div class="language__lang"><img src="css-3.png" alt="" class="language__icon"></div>
@@ -48,9 +48,32 @@
         </div>
     </section>
     <section id="projects">
-        <h1>These are some of my projects</h1>
+        <h1 class="section__heading">These are some of my <span class="span__features">projects</span></h1>
+        <div class="projects__details">
+            <figure class="project__image--wrapper">
+                <img src="https://cdn.dribbble.com/userupload/11138349/file/original-e7f7d921381f192bbcf58961f6bd0fcd.png?resize=1905x1429&vertical=center" class="project__image1">
+            </figure>
+            <figure class="project__image--wrapper">
+                <img src="https://cdn.dribbble.com/userupload/11084677/file/original-5d68a1eede77ac03e4549c7dcd7a0d14.png?resize=1905x1428&vertical=center" class="project__image2">
+            </figure>
+            <figure class="project__image--wrapper">
+                <img src="https://cdn.dribbble.com/userupload/17134597/file/original-8d6cba77fc902e43db695b3150595fe9.png?resize=1905x1429&vertical=center" class="project__image3">
+            </figure>
+        </div>
     </section>
     <footer>
+        <div class="footer__details">
+            <figure class="footer__logo--wrapper">
+                <a href="#landing"><img src="Screenshot 2024-11-24 235345.png" alt="" class="footer__logo"></a>
+            </figure>
+            <div class="footer__links">
+                <a href="https://github.com/SanatShourya/" target="_blank"><span class="footer__link">Github</span></a>
+                <a href="https://www.linkedin.com/in/sanat-shourya-205090238/" target="_blank"><span class="footer__link">LinkedIn</span></a>
+                <a href="https://sanatshourya100@gmail.com" target="_blank"><span class="footer__link">Email</span></a>
+                <a href=""><span class="footer__link">Resume</span></a>
+            </div>
+            <p class="footer__para">Copyright <span class="footer__logo">©</span> 2024 Sanat Shourya</p>
+        </div>
 
     </footer>
 
