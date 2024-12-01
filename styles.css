@@ -336,25 +336,25 @@ nav, .aboutme {
 
 
 .footer__link {
-    color: white;
-    border-bottom: 3px solid white;
-    
+    color: white;  
+    border-bottom: 3px solid white; 
 }
 
-.footer__link:hover {
-    animation: slide 1000ms backwards ease;
+.footer__link:hover .footer__link{
+    animation: slide 3000ms ease;
 }
 
 @keyframes slide {
     0% {
-        opacity: 0;
-        transform: translateX(0px);
-        width:0;
+        opacity: 1;
+        transform: translateX(-1000px);
+        border-bottom: 3px solid white;
     }
+
     100% {
         opacity: 1;
-        transform: translateX(40px);
-        width:0;
+        transform: translateX( 140px);
+        border-bottom: 3px solid white;
     }
 }
 
@@ -379,3 +379,20 @@ nav, .aboutme {
     }
     
   }
+
+
+
+/* 
+responsiveness 
+*/
+
+@media (max-width: 768px) {
+
+
+}
+
+@media (max-width: 480px) {
+
+
+}
+
