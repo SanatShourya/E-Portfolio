@@ -337,30 +337,23 @@ nav, .aboutme {
     justify-content: space-around;
     margin-bottom: 30px;
     
+    
 }
-
 
 .footer__link {
-    color: white;  
-    border-bottom: 3px solid white; 
+    color: white;
+    height: 3px;
+    position: relative;
+    background-color: white;  
+    bottom: -3px; 
+    width: 0;
+    right: 0;
+    transition: all 300ms ease;
 }
 
-.footer__link:hover .footer__link{
-    animation: slide 3000ms ease;
-}
-
-@keyframes slide {
-    0% {
-        opacity: 1;
-        transform: translateX(-1000px);
-        border-bottom: 3px solid white;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX( 140px);
-        border-bottom: 3px solid white;
-    }
+.footer__link:hover {
+    width: 100%;
+    left:0;
 }
 
 .footer__para {
