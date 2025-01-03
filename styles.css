@@ -53,6 +53,12 @@ section:nth-child(even) {
   padding: 30px;
 }
 
+/* section landing */
+
+#landing {
+  position: relative;
+}
+
 /* navigation bar */
 
 nav {
@@ -126,6 +132,12 @@ nav,
   color: #fff;
 }
 
+.contrast {
+  width: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
 /* About me */
 
 .heading {
@@ -147,6 +159,7 @@ nav,
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  position: relative;
 }
 
 .aboutme__photo {
@@ -222,7 +235,7 @@ nav,
 }
 
 .aboutme__display {
-  width: 40%;
+  width: 45%;
 }
 
 .aboutme__display--picture {
@@ -238,6 +251,221 @@ nav,
   100% {
     opacity: 1;
   }
+}
+
+.contact__wrapper {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 20px 80px rgb(0, 0, 0, 0.35);
+}
+
+.contact__lefthalf,
+.contact__righthalf {
+  width: 100%;
+  padding: 80px 50px;
+}
+
+.contact__lefthalf {
+  background-color: white;
+  border: none;
+}
+
+.contact__righthalf {
+  background-color: black;
+  position: relative;
+}
+
+.contact__lefthalf--title {
+  font-size: 32px;
+  text-align: left;
+}
+
+.contact__lefthalf--subtitle {
+  font-size: 14px;
+  text-align: left;
+  margin: 5px 0px 20px;
+}
+
+.contact__lefthalf--para {
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.75;
+  padding: 0;
+}
+
+.contact__righthalf--title {
+  font-size: 32px;
+  text-align: left;
+  color: white;
+}
+
+.contact__righthalf--subtitle {
+  font-size: 14px;
+  text-align: left;
+  margin: 10px 0px 25px;
+  color: white;
+}
+
+.form__item {
+  margin-bottom: 30px;
+}
+
+label {
+  color: white;
+}
+
+input, textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+  border-bottom: 2px solid white;
+  transition: all 300ms ease;
+}
+
+input:focus, textarea:focus {
+  border-color:#007ba7;
+  border-bottom: 2px solid #007ba7;
+}
+
+textarea {
+  resize: vertical;
+  margin-top: 5px;
+}
+
+.form__button {
+  padding: 10px 20px;
+  width: 60%;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-weight: 700;
+  color: white;
+  background-color: #007ba7;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.form__button:hover {
+  border: 1px solid white;
+  background-color: transparent;
+}
+
+.form__button:active {
+  border: 1px solid #007ba7;
+  color: #007ba7;
+}
+
+.form__close {
+  filter: invert(1);
+  width: 30px;
+  font-weight: 700;
+  position: absolute;
+  content: "";
+  top: 5%;
+  cursor: pointer;
+  right: 0;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  transition: all 300ms ease;
+}
+
+.form__close:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.form__close:active {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.form__loading--div {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.form__loading {
+  width: 50px;
+  filter: invert(1);
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate 2000ms infinite linear;
+  z-index: -1;
+}
+
+.visible {
+  z-index: 2;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.form__success {
+  color: white;
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(31, 161, 31);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0px 50px;
+  font-size: 36px;
+  z-index: -1;
+}
+
+.visible1 {
+  z-index: 3;
+}
+
+.highlight__color {
+  color: #007ba7;
+  font-weight: 700;
+}
+
+.contact__btn {
+  position: absolute;
+  bottom: 25px;
+  right: 0px;
+  transform: translate(-50%,-50%);
+  border-radius: 50px;
+  padding: 15px;
+  background-color: white;
+  filter: invert(1);
+  border: none;
+  cursor: pointer;
+}
+
+.envelope {
+  width: 30px;
 }
 
 /* Languages */
@@ -311,7 +539,7 @@ nav,
   overflow: hidden;
   position: relative;
   transition: all 300ms ease;
-  z-index: 5;
+  z-index: 3;
 }
 
 .project__content {
@@ -330,13 +558,13 @@ nav,
 }
 
 .project__image--wrapper:hover + .project__content {
-  z-index: 20;
+  z-index: 2;
   background-color: #000;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .project__image:hover {
-  opacity: 0.3;
+  opacity: 0.1;
   filter: blur(2px);
   transform: scale(1.1);
 }
@@ -440,7 +668,6 @@ nav,
 .footer__logo {
   font-size: 18px;
   color: white;
-
   z-index: 2;
 }
 

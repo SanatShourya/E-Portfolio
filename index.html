@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "1YwFicqt4P8IYdWJN",
+      });
+   })();
+</script>
   </head>
   <body>
     <section id="landing">
@@ -22,6 +33,7 @@
           <li class="nav__list--item nav__list--button">
             <a href="mailto:sanatshourya100@gmail.com" class="white">Contact</a>
           </li>
+          <img src="contrast.svg" alt="" class="contrast">
         </ul>
       </nav>
       <div class="aboutme">
@@ -81,6 +93,47 @@
             class="aboutme__display--picture"
           />
         </figure>
+        <div class="contact__wrapper">
+          <div class="contact__lefthalf">
+            <h3 class="contact__lefthalf--title">Here's a bit about me.</h3>
+            <h4 class="contact__lefthalf--subtitle">Frontend Software Engineer.</h4>
+            <p class="contact__lefthalf--para">
+              I'm a 23 year-old Indian
+              <span class="highlight__color">frontend software engineer</span> with
+              a strong passion for developing
+              websites with great <span class="highlight__color">user
+              experiences.</span>
+              <br>
+              I currently work on extremely difficult engineering problems and learn from a team consisting
+              of some of the most <span class="highlight__color">talented</span> and
+            <span class="highlight__color">experienced</span> software engineers every day. </p>
+          </div>
+          <div class="contact__righthalf">
+            <h3 class="contact__righthalf--title">Let's have a chat!</h3>
+            <h4 class="contact__righthalf--subtitle">I'm currently open to new opportunities.</h4>
+            <form id="contact__form" onsubmit="contact(event)">
+              <div class="form__item">
+                <label>* Name</label>
+                <input name="user_name" type="text" required></input>
+              </div>
+              <div class="form__item">
+                <label>* E-mail</label>
+                <input name="user_email" type="email" required></input>
+              </div>
+              <div class="form__item">
+                <label>* Message</label>
+                <textarea name="message" type="text" required></textarea>
+              </div>
+              <button class="form__button">Send it my way!</button>
+            </form>
+            <img src="cross.svg" alt="" class="form__close">
+            <div class="form__loading--div"><img src="loading.svg" alt="" class="form__loading"></div>
+            <div class="form__success">
+              Thanks for the message! Looking forward to speaking to you soon.
+            </div>
+          </div>
+        </div>
+        <button class="contact__btn"><img src="envelope.svg" alt="" class="envelope"></button>
       </div>
     </section>
     <section id="languages">
