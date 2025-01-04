@@ -24,3 +24,34 @@ function contact (event) {
         );
     })
 }
+
+
+function backgroundMove(event) {
+    const scaleVal = 20;
+    const shape = document.getElementsByClassName("shapes");
+    const x = event.clientX / scaleVal;
+    const y = event.clientY / scaleVal;
+    
+    for (let i = 0; i < shape.length; i++){
+        if (i % 2 == 0) {
+            shape[i].style.transform = `translate(${x}px, ${y}px)`;
+        }
+        else {
+            shape[i].style.transform = `translate(${-x}px, ${-y}px)`;
+        }
+    }
+}
+
+
+
+let contrastToggle = false;
+function toggleContrast() {
+
+    contrastToggle = !contrastToggle; 
+    if (contrastToggle) {
+        document.body.classList += " dark-theme";
+    }
+    else {
+        document.body.classList.remove("dark-theme");
+    }
+}
