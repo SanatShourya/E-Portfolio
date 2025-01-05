@@ -455,7 +455,7 @@ textarea {
 
 .contact__btn {
   position: fixed;
-  bottom: 15px;
+  bottom: 10px;
   right: 15px;
   transform: translate(-50%,-50%);
   border-radius: 50px;
@@ -476,6 +476,7 @@ textarea {
 
 #languages {
   margin-top: 5%;
+  padding-bottom: 30px;
 }
 
 .language__container {
@@ -894,7 +895,9 @@ textarea {
     color: white;
 }
 
-.dark-theme .logos--image {
+.dark-theme .logos--image,
+.dark-theme .contrast, 
+.dark-theme .envelope {
   filter: invert(1);
 }
 
@@ -905,5 +908,30 @@ textarea {
 .dark-theme {
   background-color: #242424;
 }
+
+.dark-theme .contact__btn {
+  background-color: black;
+}
+
+.dark-theme .nav__links::after {
+  background-color: white;
+}
+
+.dark-theme .aboutme--picture {
+  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+.dark-theme .span__language {
+  color: white;
+}
+
+.dark-theme #languages {
+  background-color: rgb(54, 53, 53);
+}
+
+.dark-theme .project__image--wrapper {
+  box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.3);
+}
+
 
 
