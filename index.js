@@ -56,14 +56,23 @@ function toggleContact() {
   const contact = document.getElementsByClassName("contact__wrapper")[0];
   const success = document.querySelector(".form__success");
   const form = document.getElementById("contact__form");
+  const navbar = document.getElementsByClassName("navbar")[0];
+  const aboutMe = document.getElementsByClassName("aboutme__description")[0];
+  const aboutMe1 = document.getElementsByClassName("aboutme__display")[0];
 
   if (toggleVal == false) {
+    navbar.classList += " aboutme__closed";
+    aboutMe.classList += " aboutme__closed";
+    aboutMe1.classList += " aboutme__closed";
     contact.classList += " contact__wrapper--open";
     success.classList.remove("visible1");
     form.reset();
     toggleVal = true;
   } else {
     contact.classList.remove("contact__wrapper--open");
+    navbar.classList.remove("aboutme__closed");
+    aboutMe.classList.remove("aboutme__closed");
+    aboutMe1.classList.remove("aboutme__closed");
     toggleVal = false;
   }
 }
