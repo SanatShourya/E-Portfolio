@@ -21,7 +21,7 @@
     <section id="landing">
       <nav>
         <div class="nav__span">
-          <span class="span__features">Sanat Shourya</span>
+          <span class="span__features click" onclick="toggleContact()">Sanat Shourya</span>
         </div>
         <ul class="nav__list">
           <li class="nav__list--item">
@@ -30,8 +30,8 @@
           <li class="nav__list--item">
             <a href="#projects" class="nav__links nav__link">Projects</a>
           </li>
-          <li class="nav__list--item nav__list--button">
-            <a href="mailto:sanatshourya100@gmail.com" class="white">Contact</a>
+          <li class="nav__list--item nav__list--button" onclick="toggleContact()">
+            <a href="#" class="white">Contact</a>
           </li>
           <img src="contrast.svg" alt="" class="contrast" onclick="toggleContrast()">
         </ul>
@@ -126,14 +126,14 @@
               </div>
               <button class="form__button">Send it my way!</button>
             </form>
-            <img src="cross.svg" alt="" class="form__close">
+            <img src="cross.svg" alt="" class="form__close" onclick="toggleContact()">
             <div class="form__loading--div"><img src="loading.svg" alt="" class="form__loading"></div>
             <div class="form__success">
               Thanks for the message! Looking forward to speaking to you soon.
             </div>
           </div>
         </div>
-        <button class="contact__btn"><img src="envelope.svg" alt="" class="envelope"></button>
+        <button class="contact__btn" onclick="toggleContact()"><img src="envelope.svg" alt="" class="envelope"></button>
       </div>
       <img src="circle.svg" alt="" class="shapes shape-0">
       <img src="squiggly.svg" alt="" class="shapes shape-1">

@@ -39,6 +39,10 @@ a {
   font-size: 28px;
 }
 
+.click {
+  cursor: pointer;
+}
+
 .span__features--para {
   font-size: 16px;
   color: #007ba7;
@@ -57,6 +61,7 @@ section:nth-child(even) {
 
 #landing {
   position: relative;
+  visibility: visible;
 }
 
 /* navigation bar */
@@ -64,6 +69,7 @@ section:nth-child(even) {
 nav {
   height: 100px;
   margin: 0 auto;
+  visibility: visible;
 }
 
 .nav__span {
@@ -136,6 +142,15 @@ nav,
   width: 20px;
   margin-right: 20px;
   cursor: pointer;
+  transition: all 450ms ease;
+}
+
+.contrast:hover {
+  transform: scale(1.2);
+}
+
+.contrast:active {
+  transform: scale(0.9);
 }
 
 /* About me */
@@ -232,6 +247,15 @@ nav,
 
 .logos--image {
   width: 25px;
+  transition: all 300ms ease;
+}
+
+.logos--image:hover {
+  transform: scale(1.2);
+}
+
+.logos--image:active {
+  transform: scale(0.9);
 }
 
 .aboutme__display {
@@ -259,28 +283,42 @@ nav,
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 10px 25px 80px rgba(1, 1, 1, 0.7);
   display: flex;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0px 20px 80px rgb(0, 0, 0, 0.35);
   z-index: -1;
   opacity: 0;
+  transition: all 300ms ease;
+}
+
+.contact__wrapper--open {
+  z-index: 3;
+  opacity: 1;
 }
 
 .contact__lefthalf,
 .contact__righthalf {
   width: 100%;
   padding: 80px 50px;
+  transition: all 1000ms ease;
 }
 
 .contact__lefthalf {
   background-color: white;
   border: none;
+  transform: translateX(-150%);
+}
+
+.contact__wrapper--open .contact__lefthalf,
+.contact__wrapper--open .contact__righthalf {
+  transform: translateX(0%);
 }
 
 .contact__righthalf {
   background-color: black;
   position: relative;
+  transform: translateX(150%);
 }
 
 .contact__lefthalf--title {
@@ -322,7 +360,8 @@ label {
   color: white;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   border: none;
   outline: none;
@@ -333,8 +372,9 @@ input, textarea {
   transition: all 300ms ease;
 }
 
-input:focus, textarea:focus {
-  border-color:#007ba7;
+input:focus,
+textarea:focus {
+  border-color: #007ba7;
   border-bottom: 2px solid #007ba7;
 }
 
@@ -393,6 +433,7 @@ textarea {
   height: 100%;
   background-color: black;
   position: absolute;
+  display: none;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -408,10 +449,10 @@ textarea {
   left: 50%;
   transform: translate(-50%, -50%);
   animation: rotate 2000ms infinite linear;
-  z-index: -1;
 }
 
 .visible {
+  display: flex;
   z-index: 2;
 }
 
@@ -435,7 +476,7 @@ textarea {
   background-color: rgb(31, 161, 31);
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -445,6 +486,7 @@ textarea {
 }
 
 .visible1 {
+  display: flex;
   z-index: 3;
 }
 
@@ -457,7 +499,7 @@ textarea {
   position: fixed;
   bottom: 10px;
   right: 15px;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   border-radius: 50px;
   padding: 15px;
   background-color: white;
@@ -466,6 +508,15 @@ textarea {
   z-index: 2;
   border: invert(0);
   border: 2px solid black;
+  transition: all 450ms ease;
+}
+
+.contact__btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.contact__btn:active {
+  transform: translate(-50%, -50%) scale(0.9);
 }
 
 .envelope {
@@ -842,8 +893,7 @@ textarea {
   }
 }
 
-
-/* Background-shapes */ 
+/* Background-shapes */
 
 .shapes {
   position: fixed;
@@ -884,19 +934,17 @@ textarea {
   visibility: hidden;
 }
 
-
-/* dark theme */ 
+/* dark theme */
 
 .dark-theme .nav__link,
 .dark-theme .heading,
 .dark-theme .section__heading,
-.dark-theme .subheading
- {
-    color: white;
+.dark-theme .subheading {
+  color: white;
 }
 
 .dark-theme .logos--image,
-.dark-theme .contrast, 
+.dark-theme .contrast,
 .dark-theme .envelope {
   filter: invert(1);
 }
@@ -917,7 +965,8 @@ textarea {
   background-color: white;
 }
 
-.dark-theme .aboutme--picture {
+.dark-theme .aboutme--picture,
+.dark-theme .contact__wrapper {
   box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5);
 }
 
@@ -932,6 +981,3 @@ textarea {
 .dark-theme .project__image--wrapper {
   box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.3);
 }
-
-
-
