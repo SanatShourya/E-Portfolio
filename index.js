@@ -61,7 +61,7 @@ function toggleContact() {
   const aboutMe1 = document.getElementsByClassName("aboutme__display")[0];
 
   if (toggleVal == false) {
-    navbar.classList += " aboutme__closed";
+    navbar.classList += " navbar__closed";
     aboutMe.classList += " aboutme__closed";
     aboutMe1.classList += " aboutme__closed";
     contact.classList += " contact__wrapper--open";
@@ -70,9 +70,11 @@ function toggleContact() {
     toggleVal = true;
   } else {
     contact.classList.remove("contact__wrapper--open");
-    navbar.classList.remove("aboutme__closed");
+    setTimeout(() => {
+        navbar.classList.remove("navbar__closed");
     aboutMe.classList.remove("aboutme__closed");
-    aboutMe1.classList.remove("aboutme__closed");
+    aboutMe1.classList.remove("aboutme__closed"); // Reappear after 2 seconds
+    }, 1100);
     toggleVal = false;
   }
 }
